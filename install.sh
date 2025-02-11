@@ -256,8 +256,8 @@ initVar() {
     # 宝塔域名
     btDomain=
     # nginx配置文件路径
-    nginxConfigPath=/etc/nginx/conf.d/
-    nginxStaticPath=/usr/share/nginx/html/
+    nginxConfigPath=/usr/local/nginx/conf/vhost/
+    nginxStaticPath=/usr/local/nginx/conf/html/
 
     # 是否为预览版
     prereleaseStatus=false
@@ -1036,7 +1036,7 @@ mkdirTools() {
 
     mkdir -p /etc/v2ray-agent/sing-box/conf/config
 
-    mkdir -p /usr/share/nginx/html/
+    mkdir -p /usr/local/nginx/html/
 }
 
 # 安装工具包
@@ -1148,7 +1148,7 @@ installTools() {
     if echo "${selectCustomInstallType}" | grep -qwE ",7,|,8,|,7,8,"; then
         echoContent green " ---> 检测到无需依赖Nginx的服务，跳过安装"
     else
-        if ! find /usr/bin /usr/sbin | grep -q -w nginx; then
+        if ! find /usr/bin /usr/sbin /usr/local /usr/local/nginx/sbin/ | grep -q -w nginx; then
             echoContent green " ---> 安装nginx"
             installNginxTools
         else
