@@ -1,4 +1,4 @@
-# v2ray-agent
+# v2ray-agent跳过LNMP nginx安装
 
 - [感谢 JetBrains 提供的非商业开源软件开发授权](https://www.jetbrains.com/?from=v2ray-agent)
 
@@ -28,7 +28,7 @@ Xray-core/sing-box 一键脚本快速安装
 ### 安装
 
 ```
-wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/miihhaa/v2ray-1agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
 ```
 
 ### 使用
