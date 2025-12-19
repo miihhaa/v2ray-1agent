@@ -63,7 +63,7 @@ checkSystem() {
         installType='apk add'
         upgrade="apk update"
         removeType='apk del'
-        nginxConfigPath=/usr/local/nginx/conf/vhost
+        nginxConfigPath=/usr/local/nginx/conf/html
     elif { [[ -f "/etc/issue" ]] && grep -qi "debian" /etc/issue; } || { [[ -f "/proc/version" ]] && grep -qi "debian" /proc/version; } || { [[ -f "/etc/os-release" ]] && grep -qi "ID=debian" /etc/issue; }; then
         release="debian"
         installType='apt -y install'
